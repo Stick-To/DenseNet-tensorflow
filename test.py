@@ -67,9 +67,6 @@ for epoch in range(epochs):
     train_loss = []
     test_acc = []
     # reduce learning rate
-    if epoch == 1:
-        lr = 0.1
-        print('warm up  learning rate =', lr, 'now')
     if epoch in reduce_lr_epoch:
         lr = lr * 0.1
         print('reduce learning rate =', lr, 'now')
